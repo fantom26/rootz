@@ -1,0 +1,25 @@
+.mobile-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18rem 1.5rem 7rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-grey);
+  gap: 4.5rem;
+
+  &-nav {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: auto;
+      gap: 5.5rem;
+
+      a {
+        font-size: fluid(4rem, 2.8rem);
+      }
+    }
+  }
+}

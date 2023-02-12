@@ -1,0 +1,136 @@
+.saves {
+  padding-top: 10.5rem;
+  padding-bottom: 10.5rem;
+  background-color: var(--clr-secondary);
+
+  @media (max-width: em(767)) {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  &__slider {
+    .swiper-slide-active {
+      transform: scale(1);
+
+      .saves__slide {
+        &-img {
+          transform: translate(-10rem, -11rem) scale(0.4);
+          transition: transform var(--transition);
+
+          .saves__slide-title {
+            display: none;
+          }
+        }
+
+        &-bg {
+          &-ghost {
+            transform: translate(-50%, -50%) scale(1);
+            transition: transform var(--transition);
+          }
+        }
+
+        &-text {
+          @include transition(var(--transition), opacity, visibility);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    .swiper-slide-prev,
+    .swiper-slide-next {
+      transform: scale(0.85);
+    }
+  }
+
+  &__slide {
+    position: relative;
+    transform: scale(0.7);
+    transition: transform var(--transition);
+
+    &-img {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      transition: transform var(--transition);
+
+      .saves__slide-title {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &-bg {
+      display: flex;
+
+      &-ghost {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%) scale(0.1);
+        transition: transform var(--transition);
+      }
+    }
+
+    &-title {
+      white-space: nowrap;
+    }
+
+    &-info {
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      width: 100%;
+      max-width: 28rem;
+      transform: translate(-50%, -40%);
+      @media (max-width: em(1100)) {
+        max-width: 24rem;
+      }
+
+      @media (max-width: em(500)) {
+        max-width: 22rem;
+      }
+    }
+
+    &-text {
+      @include push--auto;
+      @include transition(var(--transition), opacity, visibility);
+      margin-top: 1rem;
+      line-height: 175%;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+
+      @media (min-width: em(400)) {
+        font-size: fluid(1.5rem, 1.2rem);
+      }
+    }
+  }
+
+  &__navigation {
+    @include push--auto;
+    @include flex-all-center;
+    margin-top: 3rem;
+    max-width: 16rem;
+
+    gap: 4rem;
+
+    &-count {
+      font-size: fluid(2.4rem, 2.2rem);
+      line-height: 135%;
+      span:not(.saves__navigation-current) {
+        opacity: 0.2;
+      }
+    }
+
+    &-prev,
+    &-next {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.socials {
+  @include flex-v-center;
+  gap: 1.5rem;
+
+  svg {
+    g rect {
+      fill: #333333;
+      transition: fill var(--transition);
+    }
+    @media (hover) {
+      g rect:hover {
+        fill: var(--clr-accent);
+        transition: fill var(--transition);
+      }
+    }
+  }
+}

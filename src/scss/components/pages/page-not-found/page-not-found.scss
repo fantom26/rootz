@@ -1,0 +1,28 @@
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: var(--clr-grey);
+
+  @media (max-width: em(767)) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  &__img {
+    display: flex;
+    max-width: 145.2rem;
+  }
+
+  &__title,
+  &__btn {
+    margin-top: 4rem;
+  }
+
+  &__btn {
+    @include push--auto;
+  }
+}

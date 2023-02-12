@@ -1,0 +1,39 @@
+.typography {
+  &.h2 {
+    font-size: fluid(4rem, 2.8rem);
+    text-transform: capitalize;
+  }
+
+  &.h3 {
+    font-size: fluid(3.4rem, 2.8rem);
+  }
+
+  &.h3,
+  &.h2 {
+    font-weight: 700;
+    line-height: 140%;
+  }
+
+  &.h4 {
+    font-weight: 600;
+    font-size: fluid(2.4rem, 1.8rem);
+    line-height: 140%;
+  }
+
+  &.paragraph1 {
+    font-size: fluid(1.8rem, 1.5rem);
+    line-height: 180%;
+  }
+
+  &.paragraph2 {
+    line-height: 200%;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.white {
+    color: var(--clr-white);
+  }
+}

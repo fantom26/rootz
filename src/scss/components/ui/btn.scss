@@ -1,0 +1,84 @@
+.btn {
+  @include flex-all-center;
+  @include transition(var(--transition), color, background-color);
+  padding: 0.4rem 1rem;
+  width: max-content;
+  min-width: 10rem;
+  min-height: 4.8rem;
+  font-weight: 700;
+  line-height: 140%;
+
+  &.col {
+    &-primary {
+      border-radius: 3rem;
+      color: var(--clr-white);
+      background-color: var(--clr-primary);
+
+      @media (hover) {
+        &:not(:disabled) {
+          &:hover {
+            @include transition(var(--transition), color, border, background-color);
+            border: 0.1rem solid var(--clr-primary);
+            color: var(--clr-black);
+            background-color: var(--clr-white);
+          }
+        }
+      }
+    }
+
+    &-ghost {
+      border-radius: 4rem;
+      box-shadow: 0px 30px 40px rgba(240, 101, 126, 0.05);
+      color: var(--clr-black);
+      background-color: var(--clr-white);
+
+      @media (hover) {
+        &:not(:disabled) {
+          &:hover {
+            @include transition(var(--transition), color, background-color);
+            color: var(--clr-white);
+            background-color: var(--clr-primary);
+          }
+        }
+      }
+    }
+  }
+
+  &.size {
+    &-16 {
+      font-size: 1.6rem;
+    }
+
+    &-13 {
+      font-size: 1.3rem;
+    }
+  }
+
+  &.width {
+    &-full {
+      min-width: 100%;
+    }
+
+    &-large {
+      min-width: 16.5rem;
+    }
+
+    &-middle {
+      min-width: 14.5rem;
+    }
+
+    &-small {
+      min-width: 12rem;
+    }
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &:disabled {
+    @include transition(var(--transition), color, background-color);
+    color: var(--clr-white);
+    cursor: not-allowed;
+  }
+}

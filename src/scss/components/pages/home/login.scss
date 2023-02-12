@@ -1,0 +1,94 @@
+.login {
+  &__wrapper {
+    @include flex-all-sb;
+    border-radius: 2rem;
+    padding: 10.5rem 10.5rem 10.5rem 8rem;
+    background-color: var(--clr-secondary);
+    gap: 1.5rem;
+
+    @media (max-width: em(1200)) {
+      padding: 6rem;
+    }
+
+    @media (max-width: em(992)) {
+      padding: 4rem;
+    }
+
+    @media (max-width: em(850)) {
+      flex-direction: column;
+      margin-left: -1.5rem;
+      width: calc(100% + 3rem);
+      gap: 5.5rem;
+    }
+
+    @media (max-width: em(576)) {
+      padding: 4rem 1.5rem 5.5rem;
+    }
+  }
+
+  &__info {
+    max-width: 39rem;
+
+    @media (max-width: em(850)) {
+      max-width: initial;
+    }
+  }
+
+  &__text {
+    margin-top: 4rem;
+
+    @media (max-width: em(850)) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__form {
+    position: relative;
+    border-radius: 1.5rem;
+    padding: 4rem 5.5rem;
+    width: 100%;
+    max-width: 42rem;
+    background-color: #f7f3f4;
+
+    @media (max-width: em(992)) {
+      padding: 3rem;
+    }
+
+    @media (max-width: em(850)) {
+      max-width: initial;
+    }
+
+    @media (max-width: em(576)) {
+      padding: 4rem 2.5rem;
+    }
+
+    &::before {
+      @include pseudo;
+      @include bg-cover;
+      right: -3rem;
+      top: -2.5rem;
+      width: 100%;
+      height: 10.3rem;
+      max-width: 8.3rem;
+      background-image: url("../../../../../public/img/ui/decor.svg");
+      pointer-events: none;
+
+      @media (max-width: em(576)) {
+        top: -3.5rem;
+        transform: scale(0.7);
+      }
+    }
+
+    &-title {
+      margin-bottom: 2.5rem;
+    }
+
+    &-btn {
+      margin-top: 3rem;
+    }
+
+    .form-input + .form-input {
+      margin-top: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import "./settings/functions.scss";
+@import "./settings/fonts.scss";
+@import "./mixins/index.scss";
+@import "./settings/normalize.scss";
+
+$containerWidth: 115rem;
+
+:root {
+  --content-width: 112rem;
+  --container-offset: 1.5rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --transition: 0.3s;
+
+  --clr-black: #1e1a20;
+  --clr-grey: #f7f3f4;
+  --clr-white: #ffffffde;
+  --clr-primary: #f2726c;
+  --clr-secondary: #ffbd9e;
+
+  --clr-error: #cb3d40;
+  --clr-accent: #7675fd;
+}
+
+body {
+  @include font-source(Poppins, 1.6rem, var(--clr-black), 400, false);
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  min-width: 37.5rem;
+  min-height: 100%;
+}
+
+.container {
+  @include push--auto;
+  padding-right: var(--container-offset);
+  padding-left: var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.pd {
+  &-t190 {
+    padding-top: 19rem;
+
+    @media (max-width: em(767)) {
+      padding-top: 10rem;
+    }
+  }
+
+  &-b190 {
+    padding-bottom: 19rem;
+
+    @media (max-width: em(767)) {
+      padding-bottom: 10rem;
+    }
+  }
+}
+
+@import "./libs/swiper.scss";
+
+@import "./components/common/drawer.scss";
+@import "./components/common/socials.scss";
+
+@import "./components/ui/logo.scss";
+@import "./components/ui/btn.scss";
+@import "./components/ui/typography.scss";
+
+@import "./components/form/input.scss";
+@import "./components/form/error.scss";
+
+@import "./components/sections/header/header.scss";
+@import "./components/sections/header/hamburger-menu.scss";
+@import "./components/sections/header/mobile-menu.scss";
+@import "./components/sections/footer.scss";
+
+@import "./components/pages/home/hero.scss";
+@import "./components/pages/home/team.scss";
+@import "./components/pages/home/login.scss";
+@import "./components/pages/home/faq.scss";
+@import "./components/pages/home/saves.scss";
+@import "./components/pages/page-not-found/page-not-found.scss";

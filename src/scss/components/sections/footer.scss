@@ -1,0 +1,70 @@
+.footer {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+
+  @media (max-width: em(767)) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  &__wrapper,
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  &__wrapper {
+    flex: 0 1 43%;
+
+    @media (max-width: em(576)) {
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+  }
+
+  &__inner {
+    flex: 0 1 57%;
+
+    @media (max-width: em(576)) {
+      gap: 3.5rem;
+    }
+  }
+
+  .paragraph2 {
+    font-size: 1.3rem;
+    line-height: 185%;
+  }
+
+  &__contacts {
+    p {
+      margin-top: 3rem;
+      max-width: 15rem;
+
+      @media (max-width: em(576)) {
+        margin-top: 0.5rem;
+        max-width: initial;
+      }
+    }
+  }
+
+  &__headquarters {
+    p {
+      margin-top: 3.5rem;
+      max-width: 15.5rem;
+
+      @media (max-width: em(576)) {
+        margin-top: 1.5rem;
+        max-width: initial;
+      }
+    }
+  }
+
+  .socials {
+    margin-top: 3.5rem;
+
+    @media (max-width: em(576)) {
+      margin-top: 2rem;
+    }
+  }
+}
