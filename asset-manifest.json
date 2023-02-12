@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rootz/static/css/main.48707094.css",
-    "main.js": "/rootz/static/js/main.87c0d196.js",
+    "main.js": "/rootz/static/js/main.aae643eb.js",
     "static/media/Poppins-Regular.woff2": "/rootz/static/media/Poppins-Regular.1d33b9ebc1956fde34de.woff2",
     "static/media/Poppins-Bold.woff2": "/rootz/static/media/Poppins-Bold.159bd5de094f09943cea.woff2",
     "static/media/Poppins-SemiBold.woff2": "/rootz/static/media/Poppins-SemiBold.f668dc2503fe798a814b.woff2",
@@ -13,10 +13,10 @@
     "static/media/bottom.svg": "/rootz/static/media/bottom.99cb81c438dd7914d41c.svg",
     "static/media/pointer.svg": "/rootz/static/media/pointer.fc131d571c5d4c2a1ac8.svg",
     "main.48707094.css.map": "/rootz/static/css/main.48707094.css.map",
-    "main.87c0d196.js.map": "/rootz/static/js/main.87c0d196.js.map"
+    "main.aae643eb.js.map": "/rootz/static/js/main.aae643eb.js.map"
   },
   "entrypoints": [
     "static/css/main.48707094.css",
-    "static/js/main.87c0d196.js"
+    "static/js/main.aae643eb.js"
   ]
 }
