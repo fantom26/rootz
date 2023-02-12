@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/rootz/static/css/main.48707094.css",
+    "main.js": "/rootz/static/js/main.26ceb78f.js",
+    "static/media/Poppins-Regular.woff2": "/rootz/static/media/Poppins-Regular.1d33b9ebc1956fde34de.woff2",
+    "static/media/Poppins-Bold.woff2": "/rootz/static/media/Poppins-Bold.159bd5de094f09943cea.woff2",
+    "static/media/Poppins-SemiBold.woff2": "/rootz/static/media/Poppins-SemiBold.f668dc2503fe798a814b.woff2",
+    "index.html": "/rootz/index.html",
+    "static/media/decor.svg": "/rootz/static/media/decor.fafbac7e724cb9823a97.svg",
+    "static/media/top.svg": "/rootz/static/media/top.02b911983d87b2c74719.svg",
+    "static/media/bottom-mob.svg": "/rootz/static/media/bottom-mob.098f6256c4921a2b0ff4.svg",
+    "static/media/top-mob.svg": "/rootz/static/media/top-mob.c5e2e7c9361ee72d3b49.svg",
+    "static/media/bottom.svg": "/rootz/static/media/bottom.99cb81c438dd7914d41c.svg",
+    "static/media/pointer.svg": "/rootz/static/media/pointer.fc131d571c5d4c2a1ac8.svg",
+    "main.48707094.css.map": "/rootz/static/css/main.48707094.css.map",
+    "main.26ceb78f.js.map": "/rootz/static/js/main.26ceb78f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48707094.css",
+    "static/js/main.26ceb78f.js"
+  ]
+}
