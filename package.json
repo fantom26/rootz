@@ -1,6 +1,7 @@
 {
   "name": "rootz",
   "version": "0.1.0",
+  "homepage": "http://fantom26.github.io/rootz",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^2.9.11",
