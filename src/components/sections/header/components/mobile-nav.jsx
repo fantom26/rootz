@@ -1,5 +1,5 @@
 import { animated, useTransition } from "@react-spring/web";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { Drawer } from "components/common";
 import { Button } from "components/ui";
@@ -8,6 +8,7 @@ import { useTranslation } from "hooks";
 
 export const MobileNav = ({ open }) => {
   const t = useTranslation();
+  const { pathname } = useLocation();
 
   const transition = useTransition(open, {
     from: {
@@ -32,9 +33,11 @@ export const MobileNav = ({ open }) => {
       <Drawer visible={open} className="mobile-menu">
         <animated.nav style={{ opacity }} className="mobile-menu-nav">
           <animated.ul className="mobile-menu-nav__list" style={{ transform: transformMain }}>
-            {Object.entries(t.navigation).map(([key, value], index) => (
-              <li key={index}>
-                <Link to={`/${key}`}>{value}</Link>
+            {t.navigation.map((item) => (
+              <li key={item.id}>
+                <Link className={`header-nav__link ${pathname === item.url ? "active" : ""}`} to={item.url}>
+                  {item.name}
+                </Link>
               </li>
             ))}
           </animated.ul>
