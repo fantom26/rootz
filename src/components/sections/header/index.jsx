@@ -6,6 +6,8 @@ import { Button, Container, Logo } from "components/ui";
 
 import { useScrollLock, useTranslation } from "hooks";
 
+import { detectBrowser } from "utils/helpers";
+
 import { HamburgerMenu } from "./components/hamburger-menu";
 import { MobileNav } from "./components/mobile-nav";
 import { Nav } from "./components/nav";
@@ -25,7 +27,7 @@ export const Header = () => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
   const [styles, api] = useSpring(() => ({
     transformTop: "translate(-6px, 10px) rotate(0deg)",
-    transformMiddle: "translate(-6px, 0px) rotate(0deg)",
+    transformMiddle: `translate(-6px, ${["Firefox", "Safari"].includes(detectBrowser()) ? "-0.5px" : "0.5px"}) rotate(0deg)`,
     transformBottom: "translate(-6px, -10px) rotate(0deg)",
     widthTop: "22px",
     widthBottom: "22px",
@@ -45,10 +47,10 @@ export const Header = () => {
 
     if (drawerIsOpen) {
       lockScroll();
-      body.querySelector(".header").classList.add("burger--active");
+      body.querySelector(".header").classList.add("mobile-menu--active");
     } else {
       unlockScroll();
-      body.querySelector(".header").classList.remove("burger--active");
+      body.querySelector(".header").classList.remove("mobile-menu--active");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [drawerIsOpen]);

@@ -10,10 +10,27 @@
     }
   }
 
+  &::after {
+    @include pseudo;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 21;
+    display: none;
+    height: 11.5rem;
+    background-color: var(--clr-grey);
+  }
+
+  &.mobile-menu--active {
+    &::after {
+      display: block;
+    }
+  }
+
   &-wrapper {
     @include flex-all-sb;
     position: relative;
-    z-index: 21;
+    z-index: 22;
     gap: 1.5rem;
 
     // bottom line

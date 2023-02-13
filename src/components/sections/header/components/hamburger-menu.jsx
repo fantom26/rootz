@@ -1,5 +1,7 @@
 import { animated } from "@react-spring/web";
 
+import { detectBrowser } from "utils/helpers";
+
 export const HamburgerMenu = (props) => {
   const { open, toggle, api, styles, animationConfig } = props;
 
@@ -17,7 +19,7 @@ export const HamburgerMenu = (props) => {
             },
             {
               transformTop: "translate(-6px, 10px) rotate(0deg)",
-              transformMiddle: "translate(-6px, 0px) rotate(0deg)",
+              transformMiddle: `translate(-6px, ${["Firefox", "Safari"].includes(detectBrowser()) ? "-0.5px" : "0.5px"}) rotate(0deg)`,
               transformBottom: "translate(-6px, -10px) rotate(0deg)",
               widthTop: "22px",
               widthBottom: "22px",
@@ -40,7 +42,10 @@ export const HamburgerMenu = (props) => {
             },
             {
               transformTop: "translate(-6px, 18.5px) rotate(45deg)",
-              transformMiddle: "translate(-12px, 0px) rotate(45deg)",
+              transformMiddle: `translate(${
+                // eslint-disable-next-line no-nested-ternary
+                ["Firefox"].includes(detectBrowser()) ? "-11px" : ["Safari"].includes(detectBrowser()) ? "-11.5px" : "-12px"
+              }, 0px) rotate(45deg)`,
               transformBottom: "translate(-6px, -18.5px) rotate(-45deg)",
               widthTop: "28px",
               widthBottom: "28px",
