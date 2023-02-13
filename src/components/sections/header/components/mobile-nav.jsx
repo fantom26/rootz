@@ -43,7 +43,7 @@ export const MobileNav = ({ open }) => {
           </animated.ul>
         </animated.nav>
         <animated.div style={{ transform: transformFoot }}>
-          <Button className="mobile-menu__btn" color="ghost" fontSize="16" uppercase={false}>
+          <Button className="mobile-menu__btn" color="ghost" fontSize="16" uppercase={false} hashLink path="#login">
             {t.btn.apply}
           </Button>
         </animated.div>

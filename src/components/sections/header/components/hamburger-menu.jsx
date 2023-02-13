@@ -1,9 +1,13 @@
+import { useEffect } from "react";
+
 import { animated } from "@react-spring/web";
+import { useLocation } from "react-router-dom";
 
 import { detectBrowser } from "utils/helpers";
 
 export const HamburgerMenu = (props) => {
   const { open, toggle, api, styles, animationConfig } = props;
+  const { key } = useLocation();
 
   const handleClick = () => {
     api.start({
@@ -60,6 +64,13 @@ export const HamburgerMenu = (props) => {
     });
     toggle((prev) => !prev);
   };
+
+  useEffect(() => {
+    if (open) {
+      handleClick();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
 
   return (
     <button className="hamburger-menu" onClick={handleClick}>

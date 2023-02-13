@@ -9,7 +9,7 @@ export const PageNotFound = () => {
       <main className="page-not-found ">
         <Container>
           <div className="page-not-found__img">
-            <img src="img/notFound/404.svg" width="1452" height="565" alt="404 Page" loading="lazy" />
+            <img src="img/notFound/404.svg" width="1452" height="565" alt="404 Page" />
           </div>
           <Typography tag="h1" variant="h2" className="page-not-found__title" center>
             {t.pages.pageNotFound.title}

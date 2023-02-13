@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { useSpring } from "@react-spring/web";
+import { useLocation } from "react-router-dom";
 
 import { Button, Container, Logo } from "components/ui";
 
@@ -22,6 +23,7 @@ const animationConfig = {
 
 export const Header = () => {
   const t = useTranslation();
+  const { key } = useLocation();
 
   const { lockScroll, unlockScroll } = useScrollLock();
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
@@ -54,6 +56,10 @@ export const Header = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [drawerIsOpen]);
+
+  useEffect(() => {
+    setDrawerIsOpen(false);
+  }, [key]);
 
   return (
     <>
