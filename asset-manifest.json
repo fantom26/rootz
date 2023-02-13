@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/rootz/static/css/main.48707094.css",
-    "main.js": "/rootz/static/js/main.d0656489.js",
+    "main.css": "/rootz/static/css/main.d9184792.css",
+    "main.js": "/rootz/static/js/main.7f20bc4f.js",
     "static/media/Poppins-Regular.woff2": "/rootz/static/media/Poppins-Regular.1d33b9ebc1956fde34de.woff2",
     "static/media/Poppins-Bold.woff2": "/rootz/static/media/Poppins-Bold.159bd5de094f09943cea.woff2",
     "static/media/Poppins-SemiBold.woff2": "/rootz/static/media/Poppins-SemiBold.f668dc2503fe798a814b.woff2",
@@ -12,11 +12,11 @@
     "static/media/top-mob.svg": "/rootz/static/media/top-mob.c5e2e7c9361ee72d3b49.svg",
     "static/media/bottom.svg": "/rootz/static/media/bottom.99cb81c438dd7914d41c.svg",
     "static/media/pointer.svg": "/rootz/static/media/pointer.fc131d571c5d4c2a1ac8.svg",
-    "main.48707094.css.map": "/rootz/static/css/main.48707094.css.map",
-    "main.d0656489.js.map": "/rootz/static/js/main.d0656489.js.map"
+    "main.d9184792.css.map": "/rootz/static/css/main.d9184792.css.map",
+    "main.7f20bc4f.js.map": "/rootz/static/js/main.7f20bc4f.js.map"
   },
   "entrypoints": [
-    "static/css/main.48707094.css",
-    "static/js/main.d0656489.js"
+    "static/css/main.d9184792.css",
+    "static/js/main.7f20bc4f.js"
   ]
 }
